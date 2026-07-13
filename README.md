@@ -29,7 +29,6 @@ ArenaOS is built with Next.js, TypeScript, Tailwind CSS, and Supabase. It is des
 - [Installation](#installation)
 - [Deployment](#deployment)
 - [Demo accounts](#demo-accounts)
-- [Screenshots](#screenshots)
 - [Performance](#performance)
 - [Security](#security)
 - [Accessibility](#accessibility)
@@ -765,60 +764,6 @@ There are no built-in demo credentials shipped in the repository. The app expect
 | Admin | Created at sign-up | Chosen at sign-up |
 
 To promote a user to admin, set their profiles.role value to admin in Supabase.
-
----
-
-## Screenshots
-
-The repository does not currently include screenshots in the assets folder. The placeholders below show where screenshots can be added.
-
-### Landing
-
-![Landing page placeholder](https://placehold.co/1200x700?text=Landing+Page)
-
-### Dashboard
-
-![Dashboard placeholder](https://placehold.co/1200x700?text=Dashboard)
-
-### Organizer
-
-![Organizer dashboard placeholder](https://placehold.co/1200x700?text=Organizer+Dashboard)
-
-### Fan
-
-![Fan dashboard placeholder](https://placehold.co/1200x700?text=Fan+Dashboard)
-
-### Volunteer
-
-![Volunteer placeholder](https://placehold.co/1200x700?text=Volunteer+View)
-
-### Staff
-
-![Staff placeholder](https://placehold.co/1200x700?text=Staff+View)
-
-### Admin
-
-![Admin placeholder](https://placehold.co/1200x700?text=Admin+View)
-
-### AI assistant
-
-![AI assistant placeholder](https://placehold.co/1200x700?text=AI+Assistant)
-
-### Emergency
-
-![Emergency response placeholder](https://placehold.co/1200x700?text=Emergency+Response)
-
-### Navigation
-
-![Navigation placeholder](https://placehold.co/1200x700?text=Navigation)
-
-### Transport
-
-![Transport placeholder](https://placehold.co/1200x700?text=Transport)
-
-### Settings
-
-![Settings placeholder](https://placehold.co/1200x700?text=Settings)
 
 ---
 
