@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your ArenaOS sign-in link</title>
+</head>
+<body style="margin:0; padding:0; background-color:#0b1220; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0b1220; padding:40px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="480" cellpadding="0" cellspacing="0" style="max-width:480px; width:100%; background-color:#161f34; border:1px solid #253048; border-radius:16px; overflow:hidden;">
+
+          <!-- Logo -->
+          <tr>
+            <td style="padding:32px 32px 0 32px;" align="left">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="background-color:#f5a623; border-radius:8px; width:32px; height:32px; text-align:center; vertical-align:middle; font-size:16px;">🏟️</td>
+                  <td style="padding-left:10px; font-size:20px; font-weight:800; color:#f3f6ff; letter-spacing:0.5px; font-family:Georgia,serif;">
+                    ARENA<span style="color:#f5a623;">OS</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Eyebrow -->
+          <tr>
+            <td style="padding:28px 32px 0 32px;">
+              <p style="margin:0; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#f5a623; font-weight:600;">Magic link</p>
+            </td>
+          </tr>
+
+          <!-- Heading -->
+          <tr>
+            <td style="padding:8px 32px 0 32px;">
+              <h1 style="margin:0; font-size:26px; line-height:1.3; color:#f3f6ff; font-weight:700;">Sign in to ArenaOS</h1>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:14px 32px 0 32px;">
+              <p style="margin:0; font-size:14px; line-height:1.6; color:#93a1c0;">Click the button below to sign in instantly — no password needed. This link expires in 10 minutes and can only be used once.</p>
+            </td>
+          </tr>
+
+          <!-- CTA button -->
+          <tr>
+            <td style="padding:28px 32px 8px 32px;" align="left">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="border-radius:10px; background-color:#f5a623;">
+                    <a href="{{ .ConfirmationURL }}" target="_blank" style="display:inline-block; padding:13px 28px; font-size:14px; font-weight:700; color:#1a1206; text-decoration:none; border-radius:10px;">Sign in</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Fallback link -->
+          <tr>
+            <td style="padding:16px 32px 0 32px;">
+              <p style="margin:0; font-size:12px; line-height:1.6; color:#5b6472;">
+                Button not working? Paste this link into your browser:<br />
+                <a href="{{ .ConfirmationURL }}" style="color:#4c8dff; word-break:break-all;">{{ .ConfirmationURL }}</a>
+              </p>
+            </td>
+          </tr>
+
+          
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:32px; border-top:1px solid #253048; margin-top:24px;">
+              <p style="margin:0 0 6px 0; font-size:12px; color:#5b6472;">
+                If you didn't request this link, you can safely ignore this email.
+              </p>
+              <p style="margin:0; font-size:12px; color:#5b6472;">
+                ArenaOS — the operating layer for live events.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

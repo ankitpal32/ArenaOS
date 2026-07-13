@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --arena-navy: #0b1220;
+  --arena-navy-light: #121b2e;
+  --arena-panel: #161f34;
+  --arena-line: #253048;
+  --arena-amber: #f5a623;
+  --arena-amber-dim: #c98416;
+  --arena-green: #2fae66;
+  --arena-red: #e5484d;
+  --arena-blue: #4c8dff;
+  --arena-purple: #b980f0;
+  --arena-cyan: #37c6d0;
+  --arena-fog: #93a1c0;
+  --arena-white: #f3f6ff;
+
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+[data-theme="light"] {
+  --arena-navy: #f5f6f9;
+  --arena-navy-light: #ffffff;
+  --arena-panel: #ffffff;
+  --arena-line: #e1e5ec;
+  --arena-amber: #b8650a;
+  --arena-amber-dim: #9a5408;
+  --arena-green: #1e8a4e;
+  --arena-red: #d62f35;
+  --arena-blue: #2563eb;
+  --arena-purple: #9333ea;
+  --arena-cyan: #0e93a0;
+  --arena-fog: #5b6472;
+  --arena-white: #12161f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--arena-navy);
+  color: var(--arena-white);
+  font-family: var(--font-body);
+}
+
+/* Smooth color transition when switching theme, scoped to elements using
+   our brand CSS-var-driven colors so it never fights Tailwind's own
+   transform/opacity transitions (e.g. hover states). */
+body,
+[class*="bg-[var(--arena"],
+[class*="text-[var(--arena"],
+[class*="border-[var(--arena"] {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Floodlight glow used sparingly as the page signature */
+.floodlight {
+  background: radial-gradient(
+    60% 50% at 50% 0%,
+    rgba(245, 166, 35, 0.16) 0%,
+    rgba(245, 166, 35, 0) 70%
+  );
+}
+
+.scoreboard-border {
+  border: 1px solid var(--arena-line);
+  background: var(--arena-panel);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.35);
+  color: var(--arena-white);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--arena-line) transparent;
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-30%) rotate(8deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(130%) rotate(8deg);
+    opacity: 0;
+  }
+}
+
+.floodlight-sweep {
+  animation: sweep 6s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes auth-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-auth-in {
+  animation: auth-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dropdown-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdown-in {
+  animation: dropdown-in 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: top right;
+}
